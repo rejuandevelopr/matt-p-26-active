@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Modal</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            padding: 40px 20px;
+            background: #1a1a1a;
+            color: #fff;
+        }
+
+        /* Button */
+        .project-button {
+            background: #4a5f4a;
+            color: #fff;
+            border: 2px solid #6b8e6b;
+            padding: 12px 24px;
+            font-size: 14px;
+            font-family: monospace;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .project-button:hover {
+            background: #5a7055;
+        }
+
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 9999;
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        .modal--active {
+            display: block;
+        }
+
+        .modal__overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+        }
+
+        .modal__container {
+            position: relative;
+            max-width: 900px;
+            margin: 40px auto;
+            background: #2a3d2a;
+            border: 2px solid #4a5f4a;
+            border-radius: 8px;
+            z-index: 10000;
+            min-height: 80vh;
+        }
+
+        .modal__close {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            width: 36px;
+            height: 36px;
+            background: #3a4d3a;
+            border: 2px solid #5a6d5a;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 20px;
+            color: #fff;
+            line-height: 1;
+            z-index: 10001;
+        }
+
+        .modal__close:hover {
+            background: #4a5d4a;
+        }
+
+        .modal__content {
+            padding: 60px 30px 30px;
+        }
+
+        .modal__pdf {
+            width: 100%;
+            height: 75vh;
+            border: 1px solid #4a5f4a;
+            border-radius: 4px;
+            background: #fff;
+        }
+
+        /* Mobile */
+        @media (max-width: 768px) {
+            .modal {
+                padding: 10px;
+            }
+
+            .modal__container {
+                margin: 20px auto;
+                min-height: auto;
+            }
+
+            .modal__content {
+                padding: 50px 15px 15px;
+            }
+
+            .modal__pdf {
+                height: 70vh;
+            }
+
+            .modal__close {
+                top: 10px;
+                right: 10px;
+                width: 32px;
+                height: 32px;
+                font-size: 18px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .modal__pdf {
+                height: 65vh;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>OPERATIONAL MANIFEST</h1>
+    <p style="margin: 20px 0;">View project documentation</p>
+    
+    <!-- Button with PDF path -->
+    <button class="project-button" data-pdf="path/to/your-document.pdf">
+        Download_Full_Dossier.pdf →
+    </button>
+
+    <!-- Modal -->
+    <div class="modal" id="modal">
+        <div class="modal__overlay"></div>
+        <div class="modal__container">
+            <button class="modal__close">&times;</button>
+            <div class="modal__content">
+                <iframe class="modal__pdf" id="pdf"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const modal = document.getElementById('modal');
+        const pdf = document.getElementById('pdf');
+        const closeBtn = document.querySelector('.modal__close');
+        const overlay = document.querySelector('.modal__overlay');
+        const buttons = document.querySelectorAll('.project-button');
+
+        // Open modal
+        buttons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                pdf.src = btn.getAttribute('data-pdf');
+                modal.classList.add('modal--active');
+                document.body.style.overflow = 'hidden';
+            });
+        });
+
+        // Close modal
+        const closeModal = () => {
+            modal.classList.remove('modal--active');
+            pdf.src = '';
+            document.body.style.overflow = '';
+        };
+
+        closeBtn.addEventListener('click', closeModal);
+        overlay.addEventListener('click', closeModal);
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeModal();
+        });
+    </script>
+</body>
+</html>
