@@ -496,7 +496,7 @@ footer .container-fluid {
 }
 
 .works-btn svg path {
-   fill: var(--work-btn);
+  fill: var(--work-btn);
 }
 
 .work-card {
@@ -645,7 +645,7 @@ footer .container-fluid {
   gap: 4px;
 }
 
-.table-tools span {
+.work-card .table-tools span {
   text-transform: uppercase;
   font-family: "JetBrains Mono";
 }
