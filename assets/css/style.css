@@ -32,12 +32,13 @@
   --x-twitter: #020202;
   --contra: #020202;
   --cursor: #020202;
-  --v0-icon: #020202;
+  --v0-icon: #020202; 
   --Midjourney: #020202;
   --framer-icon: #020202;
   --play-icon: #020202;
   --play-round: #fff;
   --rive-icon: #020202;
+  --github: #020202;
 }
 
 .dark-mode {
@@ -69,6 +70,7 @@
   --play-icon: #FFF;
   --play-round: #020202;
   --rive-icon: #FFF;
+  --github: #FFF;
 }
 
 body {
@@ -761,6 +763,12 @@ footer svg rect {
 .contraIcon path {
   fill: var(--contra);
 }
+
+.github path {
+  fill: var(--github);
+}
+
+
 
 .cursor-icon path {
   fill: var(--cursor);
