@@ -666,6 +666,11 @@ footer .container-fluid {
   max-width: 424px;
   height: 362px;
   object-fit: cover;
+  image-rendering: crisp-edges;
+  /* Prevents blur on scaling */
+  -webkit-backface-visibility: hidden;
+  /* Prevents webkit blur */
+  backface-visibility: hidden;
 }
 
 @media screen and (max-width:1440px) {
