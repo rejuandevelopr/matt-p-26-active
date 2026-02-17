@@ -296,10 +296,6 @@ header.scrolled {
   transition: color 0.3s ease;
 }
 
-.subhead:hover {
-  color: var(--font-gray-hover);
-}
-
 .home-flex__content {
   display: flex;
   align-items: center;
@@ -325,6 +321,10 @@ header.scrolled {
   display: flex;
   align-items: center;
   gap: 4px;
+}
+
+.tab-links__content:hover .subhead {
+  color: var(--font-gray-hover);
 }
 
 .links-content-flex {
@@ -863,12 +863,12 @@ footer svg rect {
 
 .resume-head-content span {
   color: var(--font-gray);
-font-family: Geist;
-font-size: 20px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-letter-spacing: 0.2px;
+  font-family: Geist;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.2px;
 }
 
 .resume-head-links {
@@ -879,11 +879,11 @@ letter-spacing: 0.2px;
 
 .resume-head-links a {
   color: var(--font-gray);
-text-align: right;
-font-family: Geist;
-font-size: 16px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-letter-spacing: 0.16px;
+  text-align: right;
+  font-family: Geist;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.16px;
 }
