@@ -231,9 +231,20 @@ header.scrolled {
   text-align: center;
 }
 
+.nav-right-content__btn {
+  transition: 0.3s ease;
+  border: 1px solid var(--body);
+}
+
+.nav-right-content__btn:hover {
+  color: var(--font-gray-hover);
+  border-color: var(--work-btn-hover);
+}
+
 .nav-right-content__btn.active {
   background-color: var(--dark-gray);
   color: var(--color-white);
+  border-color: var(--dark-gray);
 }
 
 @media screen and (max-width:768px) {
