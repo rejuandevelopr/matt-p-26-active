@@ -26,13 +26,14 @@
   --table-header: #F1F1F1;
   --dark-black: #000;
   --icon-fill: #020202;
+  --link-gray: #B0B0B0;
   /* Icon Colors */
   --markerplace-icon-bg: #020202;
   --markerplace-icon-stroke: #fff;
   --x-twitter: #020202;
   --contra: #020202;
   --cursor: #020202;
-  --v0-icon: #020202; 
+  --v0-icon: #020202;
   --Midjourney: #020202;
   --framer-icon: #020202;
   --play-icon: #020202;
@@ -58,6 +59,7 @@
   --header-border: #2F2F2F;
   --table-header: #181818;
   --icon-fill: #FFF;
+  --link-gray: #909090;
   /* Icon Colors */
   --markerplace-icon-bg: #FFF;
   --markerplace-icon-stroke: #020202;
@@ -129,7 +131,7 @@ p {
 
 p a {
   font-weight: 500;
-  text-decoration-line: underline;
+  color: var(--link-gray);
 }
 
 main {
@@ -263,7 +265,7 @@ header.scrolled {
 }
 
 .timeline {
-  color: var(--font-gray-2);
+  color: var(--font-gray);
 }
 
 .subhead {
@@ -284,7 +286,7 @@ header.scrolled {
 }
 
 .home-flex__content span:nth-child(2) {
-  color: var(--font-gray-2);
+  color: var(--font-gray);
 }
 
 .tab-links {
@@ -788,4 +790,58 @@ footer svg rect {
 
 .rive-icon path {
   fill: var(--rive-icon);
+}
+
+/* Resume */
+.resume-head {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.resume-head-content {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  gap: 8px;
+}
+
+.resume-head-content h3 {
+  color: var(--font-black);
+  font-family: Geist;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 0.24px;
+  margin: 0;
+}
+
+.resume-head-content span {
+  color: var(--font-gray);
+font-family: Geist;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+letter-spacing: 0.2px;
+}
+
+.resume-head-links {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.resume-head-links a {
+  color: var(--font-gray);
+text-align: right;
+font-family: Geist;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+letter-spacing: 0.16px;
 }
