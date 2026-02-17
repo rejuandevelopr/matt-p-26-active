@@ -646,6 +646,14 @@ footer .container-fluid {
   border-bottom: 1px solid var(--border-color);
 }
 
+.playground-table table tbody tr {
+  transition: background 0.3s ease;
+}
+
+.playground-table table tbody tr:hover {
+  background: #F8F8F8;
+}
+
 .playground-table table tbody tr td:nth-child(3) {
   text-align: end;
 }
