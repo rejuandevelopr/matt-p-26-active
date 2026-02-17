@@ -23,6 +23,7 @@
   --header-bg: #FEFEFE;
   --body: #FEFEFE;
   --work-btn: #2A2A2A;
+  --work-btn-hover: #777;
   --header-border: #E0E0E0;
   --table-header: #F1F1F1;
   --dark-black: #000;
@@ -506,8 +507,21 @@ footer .container-fluid {
   text-transform: uppercase;
 }
 
+.works-btn span {
+  transition: 0.3s ease;
+}
+
 .works-btn svg path {
   fill: var(--work-btn);
+  transition: 0.3s ease;
+}
+
+.works-btn:hover svg path {
+  fill: var(--work-btn-hover);
+}
+
+.works-btn:hover span {
+  color: var(--font-gray-hover);
 }
 
 .work-card {
