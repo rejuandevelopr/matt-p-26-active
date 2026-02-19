@@ -111,6 +111,21 @@ body {
   padding-right: 16px;
 }
 
+[data-sr] {
+  opacity: 0;
+  transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+[data-sr].sr-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+[data-sr-delay="200"] {
+  transition-delay: 0.2s;
+}
+
 .home .container {
   max-width: 800px;
 }
@@ -196,6 +211,16 @@ header.scrolled {
 
 .nav-left-content__location {
   text-align: end;
+}
+
+.nav-left-content__location span:nth-child(2) {
+  text-align: start;
+}
+
+@media screen and (max-width:768px) {
+  .nav-left-content__location span:nth-child(2) {
+    text-align: end;
+  }
 }
 
 .logo-title {

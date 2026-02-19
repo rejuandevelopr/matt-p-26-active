@@ -58,7 +58,9 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
     <link rel="stylesheet" href="assets/css/style.css">
+
     <script>
         const isDark = sessionStorage.getItem('darkMode') === 'true';
         if (isDark) {
@@ -68,7 +70,7 @@
 </head>
 
 <body class="home">
-    <!-- Header --> 
+    <!-- Header -->
     <header>
         <nav class="navbar">
             <div class="container-fluid">
@@ -86,7 +88,6 @@
                     <div class="nav-right-content__links">
                         <a href="work.html" aria-label="WORK" class="nav-right-content__btn">WORK</a>
                         <a href="playground.html" aria-label="PLAYGROUND" class="nav-right-content__btn">PLAYGROUND</a>
-                        <a href="#" aria-label="VAULT" class="nav-right-content__btn">VAULT</a>
                     </div>
                     <label class="toggle-switch">
                         <input type="checkbox" class="no-animate">
@@ -103,7 +104,9 @@
     <main>
         <div class="container">
             <div class="flex-gap">
-                <p>Hey, I’m Matt. I’m a product designer from San Diego, CA. Over the past decade, I’ve designed mostly
+                <p>Hey, I’m Matt. I’m a product designer from San Diego, CA. Over the past decade,
+                    I’ve designed
+                    mostly
                     0-1,
                     taking products from concept to launch across industries like crypto and sports betting. I’ve been
                     fortunate to work with teams at <a href="#">MakersPlace,</a> <a href="#">Olympus Finance,</a> <a
@@ -1213,8 +1216,10 @@
     </footer>
 
 
+    <!-- Lenis (keep) -->
     <script src="https://unpkg.com/lenis@1.3.4/dist/lenis.min.js"></script>
     <script src="assets/js/script.js"></script>
+
     <script>
         // Initialize Lenis
         const lenis = new Lenis({

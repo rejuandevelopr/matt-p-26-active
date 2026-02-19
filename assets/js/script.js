@@ -34,3 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.documentElement.classList.remove('dark-mode-static');
   });
 });
+
+
+
+
