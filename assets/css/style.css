@@ -322,11 +322,54 @@ header.scrolled {
   display: flex;
   align-items: center;
   gap: 8px;
+   min-width: 0;
 }
 
 .home-flex__content span:nth-child(2) {
   color: var(--font-gray);
+ overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; 
+  flex-shrink: 1;      
+  min-width: 0;        
 }
+
+
+
+.tab-links__flex {
+  min-width: 0;
+}
+
+.tab-links__content {
+  min-width: 0; /* critical */
+  flex: 1;      /* takes remaining space, leaves room for date */
+}
+
+.home-flex__content {
+  min-width: 0; /* critical */
+  overflow: hidden;
+}
+
+.home-flex__content .subhead {
+  white-space: nowrap;
+  flex-shrink: 0; /* name never shrinks */
+}
+
+.home-flex__content span:nth-child(2) {
+  color: var(--font-gray);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  min-width: 0;
+  flex-shrink: 1;
+}
+
+.timeline {
+  white-space: nowrap; /* date never wraps */
+  flex-shrink: 0;      /* date never shrinks */
+}
+
+
 
 .tab-links {
   display: flex;
