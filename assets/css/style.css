@@ -365,11 +365,9 @@ header.scrolled {
 }
 
 .timeline {
-  white-space: nowrap; /* date never wraps */
-  flex-shrink: 0;      /* date never shrinks */
+  white-space: nowrap; 
+  flex-shrink: 0;      
 }
-
-
 
 .tab-links {
   display: flex;
@@ -379,7 +377,7 @@ header.scrolled {
 
 .tab-links__flex {
   justify-content: space-between;
-  gap: 14px;
+  gap: 24px;
 }
 
 .tab-links__content {
