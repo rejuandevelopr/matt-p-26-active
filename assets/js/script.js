@@ -8,11 +8,7 @@ window.addEventListener("scroll", () => {
   }
 });
 
-
-
-
-
-
+// Dark Mode
 document.addEventListener('DOMContentLoaded', () => {
   const toggle = document.querySelector('.toggle-switch input');
   const handle = document.querySelector('.toggle-switch-handle');
@@ -37,4 +33,29 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
+// Disable browser scroll restoration
+history.scrollRestoration = 'manual';
+window.scrollTo(0, 0);
 
+// ─── BLUR REVEAL LOGIC ──────────────────────────────────────────
+const reveals = document.querySelectorAll('.reveal');
+
+const observer = new IntersectionObserver((entries) => {
+  // Collect all newly intersecting entries
+  const intersecting = entries.filter(e => e.isIntersecting);
+
+  intersecting.forEach((entry, i) => {
+    // Stagger each element by 120ms per index
+    setTimeout(() => {
+      entry.target.classList.add('visible');
+    }, i * 120);
+
+    // Stop observing once animated in
+    observer.unobserve(entry.target);
+  });
+}, {
+  threshold: 0.1,       // trigger when 10% is visible
+  rootMargin: '0px 0px -40px 0px'  // slightly before bottom of viewport
+});
+
+reveals.forEach(el => observer.observe(el));

@@ -948,3 +948,18 @@ footer svg rect {
   line-height: normal;
   letter-spacing: 0.16px;
 }
+
+/* CSS EFFECT */
+.reveal {
+  opacity: 0;
+  filter: blur(10px);
+  transform: translateY(20px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+              filter  0.7s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal.visible {
+  opacity: 1;
+  filter: blur(0px);
+  transform: translateY(0);
+}
