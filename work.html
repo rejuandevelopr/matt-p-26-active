@@ -581,7 +581,7 @@
         <div class="modal-dialog modal-xl">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLongTitle">Modal title</h1><button type="button"
+                    <button type="button"
                         class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body" style="min-height: 100vh">
@@ -645,17 +645,6 @@
         // Initialize Lenis
         const lenis = new Lenis({
             autoRaf: true,
-        });
-
-        // Stop Lenis when modal opens
-        const modal = document.getElementById('exampleModalLongTitle');
-        modal.addEventListener('show.bs.modal', () => {
-            lenis.stop();
-        });
-
-        // Restart Lenis when modal closes
-        modal.addEventListener('hidden.bs.modal', () => {
-            lenis.start();
         });
     </script>
 </body>
