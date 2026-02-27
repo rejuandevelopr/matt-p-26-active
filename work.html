@@ -74,7 +74,7 @@
         <nav class="navbar">
             <div class="container-fluid">
                 <div class="nav-left-content">
-                    <a href="index.html" class="nav-left-content__logo">
+                    <a href="index.html" class="nav-left-content__logo" aria-label="logo">
                         <span class="logo-title">Matt Silverman</span>
                         <span class="logo-subtitle">Product Designer</span>
                     </a>
@@ -86,7 +86,7 @@
                 <div class="nav-right-content">
                     <div class="nav-right-content__links">
                         <a href="work.html" aria-label="WORK" class="nav-right-content__btn active">WORK</a>
-                        <a href="playground.html" class="nav-right-content__btn">PLAYGROUND</a>
+                        <a href="playground.html" aria-label="PLAYGROUND" class="nav-right-content__btn">PLAYGROUND</a>
                     </div>
                     <label class="toggle-switch">
                         <input type="checkbox" class="no-animate">
@@ -104,30 +104,23 @@
         <section class="reveal">
             <div class="container">
                 <div class="works-btn-flex">
-                    <a href="#" class="works-btn">
+                    <a href="#" class="works-btn" aria-label="MY Journey">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                             <path d="M16.01 11H4V13H16.01V16L20 12L16.01 8V11Z" fill="#2A2A2A" />
                         </svg>
                         <span>MY Journey</span>
                     </a>
-                    <a href="#" class="works-btn" data-bs-toggle="modal" data-bs-target="#exampleModalLong">
+                    <a href="assets/cv/resume.pdf" target="_blank" aria-label="RESUME" class="works-btn" rel="noopener noreferrer">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                             <path d="M16.01 11H4V13H16.01V16L20 12L16.01 8V11Z" fill="#2A2A2A" />
                         </svg>
                         <span>RESUME</span>
                     </a>
-                    <!-- <button class="works-btn" type="button" data-bs-toggle="modal"
-                        data-bs-target="#exampleModalLongTitle">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                            <path d="M16.01 11H4V13H16.01V16L20 12L16.01 8V11Z" fill="#2A2A2A" />
-                        </svg>
-                        <span>RESUME</span>
-                    </button>  -->
                 </div>
             </div>
         </section>
-        <!-- Modal -->
 
+        <!-- Work Start -->
         <section>
             <div class="container">
                 <div class="row gx-4 gy-3 mt-0 gy-md-4 work-grid">
@@ -579,191 +572,10 @@
                 </div>
             </div>
         </section>
+        <!-- Work End -->
     </main>
 
-    <div class="modal fade" id="exampleModalLong" tabindex="-1" aria-labelledby="exampleModalLongTitle"
-        aria-hidden="true" data-bs-backdrop="false">
-        <div class="modal-dialog modal-xl">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body" style="min-height: 100vh">
-                    <div class="resume-head">
-                        <div class="resume-head-content">
-                            <h3>Matt Silverman</h3>
-                            <span>Product Designer</span>
-                        </div>
-                        <div class="resume-head-links">
-                            <a href="#">mattsilverman.xyz</a>
-                            <a href="mailto:silverman.me@gmail.com">silverman.me@gmail.com</a>
-                            <a href="callto:+8587358742">(858) 735-8742</a>
-                        </div>
-                    </div>
-
-                    <table class="resume-body">
-
-                        <tbody>
-                            <tr>
-                                <td><span class="resume-body__heading">Intro</span></td>
-                                <td class="resume-body__content">
-                                    <p>Hello - I’m an experienced Product Designer based in
-                                        San Diego, CA. I’ve designed for 0-1 products from concept to launch, across
-                                        industries like crypto and sports betting. My approach centers on turning
-                                        complex systems into software that feels effortless and human. Simplicity drives
-                                        my process, enabling meaningful solutions that deliver measurable business
-                                        growth.</p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><span class="resume-body__heading">Experience</span></td>
-                                <td>
-                                    <div class="resume-body__flex">
-                                        <div class="resume-body__content">
-                                            <div class="resume-body__content-head">
-                                                <h3><span>MakersPlace</span> - Senior Product Designer</h3>
-                                                <h4>Oct 2022 - Feb 2025</h4>
-                                                <p>San Francisco, CA (Remote)</p>
-                                            </div>
-                                            <p>An NFT marketplace and gallery focused on fine digital art.</p>
-                                            <ul>
-                                                <li>Led product design for all projects at MakersPlace from strategy to
-                                                    launch.</li>
-                                                <li>Collaborated on a daily basis with the Head of Product, Head of
-                                                    Design,
-                                                    1 Brand Designer, 2 Product Managers, 8 Engineers, and many other
-                                                    teammates outside of the Tech Org to accomplish the goals on our
-                                                    product
-                                                    roadmap.</li>
-                                                <li>Designed and implemented a modular design system that aligned with
-                                                    the
-                                                    brand’s strategic direction, enhancing scalability and improving
-                                                    team
-                                                    efficiency, resulting in an average of 1.5 projects shipped per week
-                                                    by
-                                                    the Tech Org throughout 2023 and 2024.</li>
-                                                <li>Successfully redesigned every legacy page on the platform increasing
-                                                    session conversion by 77%, increased Private Sales volume by 500%,
-                                                    and
-                                                    increased marketshare by 381% during 2024.</li>
-                                                <li>Redesigned core pages and features such as the Product Detail Page,
-                                                    Exhibition Page, Profile Page, Editorial Page, Settings, Purchase
-                                                    Flows,
-                                                    Selling Flows, Minting Flows, Onboarding and Sign in Flows,
-                                                    Generative
-                                                    and Private Sales PDP’s, and many more projects and feature
-                                                    requests.
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="resume-body__content">
-                                            <div class="resume-body__content-head">
-                                                <h3><span>Olympus DAO</span> - Lead Product Designer</h3>
-                                                <h4>Jul 2021 - Oct 2022</h4>
-                                                <p>San Francisco, CA (Remote)</p>
-                                            </div>
-                                            <p>A decentralized reserve currency protocol built on the Ethereum
-                                                blockchain.</p>
-                                            <ul>
-                                                <li>Led design for Olympus Give, pioneering the first grants
-                                                    administration system fully enabled by Olympus DAO technology,
-                                                    transforming it from a charity use case to a utility use case.</li>
-                                                <li>Collaborated daily with a cross-functional pod, including a Product
-                                                    Manager, two Backend Engineers, two Frontend Engineers, two Product
-                                                    Designers, the Olympus Grants Program team, and other core team
-                                                    members across the DAO.</li>
-                                                <li>I helped mentor and lead 2 other designers working on design systems
-                                                    and core product design.</li>
-                                                <li>Olympus OHM token holders donated more than $700k through the
-                                                    Olympus Give system.</li>
-                                                <li>I contributed in designing core products such as Stake, Wrap, and
-                                                    Bond, which support Olympus DAO’s innovative financial models and
-                                                    helped the protocol manage over $3 billion in total value locked
-                                                    (TVL).
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="resume-body__content">
-                                            <div class="resume-body__content-head">
-                                                <h3><span>The Action Network</span> - Product Designer</h3>
-                                                <h4>May 2019 - Feb 2020</h4>
-                                                <p>San Francisco, CA</p>
-                                            </div>
-                                            <p>Action is a sports betting, media, and analytics platform.</p>
-                                            <ul>
-                                                <li>I designed sports betting experiences for The Action Network
-                                                    website, and Action iOS App.</li>
-                                                <li>Worked as one of two Product Designers collaborating daily with a
-                                                    cross-functional pod that included Product Managers, Backend
-                                                    Engineers, and Frontend Engineers focused on delivering the Action
-                                                    App and website.</li>
-                                                <li>I helped create a Fantasy Football pick’em game, Widgets for Sports
-                                                    Book partners, and designed key features for Action PRO premium
-                                                    subscription service, delivering advanced betting analytics and
-                                                    real-time insights that increased subscriber conversion.</li>
-                                                <li>Contributed to the early development and design of BetSync, which
-                                                    later became one of The Action Network’s flagship features.</li>
-                                            </ul>
-                                        </div>
-                                        <div class="resume-body__content">
-                                            <div class="resume-body__content-head">
-                                                <h3><span>Bay & Bake</span> - Founder & Product Designer</h3>
-                                                <h4>Sept 2011 - Present</h4>
-                                                <p>San Diego, CA</p>
-                                            </div>
-                                            <p>An independent Product Design studio.</p>
-                                            <ul>
-                                                <li>As an independent product designer, I’ve created products and
-                                                    experiences for over a dozen startups.</li>
-                                                <li>My design work has been instrumental in helping multiple companies
-                                                    successfully secure funding, contributing to over $1M raised in seed
-                                                    rounds or token sales.</li>
-                                                <li>Projects include website and iOS app design, design systems,
-                                                    prototyping.</li>
-                                                <li>Companies that I have worked with include Magic Instruments (YC
-                                                    W16), Kriya AI (BoostVC Tribe 9), SenseiHub (BoostVC Tribe 9),
-                                                    Boditrak Sports, Elata BioSciences, Couchloop, and over a dozen
-                                                    others.</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><span class="resume-body__heading">Skills</span></td>
-                                <td class="resume-body__content">
-                                    <p>Product Design, UX Design, UI Design, Prototyping, User Research, Information
-                                        Architecture, Project Management, Competitor Analysis, Usability Testing,
-                                        Management, Leadership, Teamwork.</p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><span class="resume-body__heading">Tech Stack</span></td>
-                                <td class="resume-body__content">
-                                    <p>Figma, Cursor, v0, Framer, Perplexity, Notion</p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><span class="resume-body__heading">Education</span></td>
-                                <td class="resume-body__content">
-                                    <p>I dropped out of school and am mostly self-taught. While my education experience
-                                        is not conventional, I have found success following my passions, learning from
-                                        online resources, attending design events, having mentors in the industry, and
-                                        surrounding myself with talented designers. I’ve applied my learnings through
-                                        direct working experiences in various freelance, contract, or in-house
-                                        opportunities. I continue to learn and grow in the areas of design, HCI, and
-                                        computer science.</p>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-
-
-                </div>
-            </div>
-        </div>
-    </div>
-
+     <!-- Footer Start -->
     <footer>
         <div class="container-fluid">
             <span>© 2026 Matt Silverman</span>
@@ -794,24 +606,16 @@
             </div>
         </div>
     </footer>
+    <!-- Footer End -->
 
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-        crossorigin="anonymous"></script>
-
+    <!-- Lenis (keep) -->
     <script src="https://unpkg.com/lenis@1.3.4/dist/lenis.min.js"></script>
     <script src="assets/js/script.js"></script>
     <script>
+        // Initialize Lenis
         const lenis = new Lenis({
-            prevent: (node) => node.classList.contains('modal') || node.classList.contains('modal-body'),
+            autoRaf: true,
         });
-
-        function raf(time) {
-            lenis.raf(time);
-            requestAnimationFrame(raf);
-        }
-        requestAnimationFrame(raf);
     </script>
 </body>
 
