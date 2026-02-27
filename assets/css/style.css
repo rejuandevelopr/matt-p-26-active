@@ -721,6 +721,10 @@ footer .container-fluid {
   gap: 4px;
 }
 
+.work-card-content .table-tools span {
+  font-family: "JetBrains Mono";
+}
+
 /* Playground */
 .playground-table {
   margin-top: 2px;
