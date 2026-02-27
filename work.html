@@ -47,17 +47,40 @@
     <!-- Theme Color (for mobile browser UI) -->
     <meta name="theme-color" content="#F7F7F7">
 
-    <!-- DNS and connection hints -->
-    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
-    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.4/dist/lenis.css">
+    <!-- Preconnect only to critical origins (max 2-3) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- DNS-prefetch for non-critical CDNs (lighter than preconnect) -->
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+    <link rel="dns-prefetch" href="https://unpkg.com">
+
+    <!-- Bootstrap: load non-render-blocking -->
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" as="style"
+        onload="this.onload=null;this.rel='stylesheet'"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <noscript>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    </noscript>
+
+    <!-- Google Fonts: swap prevents render block -->
     <link
-        href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
-        rel="stylesheet">
+        href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap&display=swap"
+        rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
+            rel="stylesheet">
+    </noscript>
+
+    <!-- Lenis: non-critical, load async -->
+    <link rel="preload" href="https://unpkg.com/lenis@1.3.4/dist/lenis.css" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.4/dist/lenis.css">
+    </noscript>
+
+    <!-- Your CSS: keep this render-blocking (it's 1st party, served at 0ms) -->
     <link rel="stylesheet" href="assets/css/style.css">
     <script>
         const isDark = sessionStorage.getItem('darkMode') === 'true';
@@ -110,7 +133,8 @@
                         </svg>
                         <span>MY Journey</span>
                     </a>
-                    <a href="assets/cv/resume.pdf" target="_blank" aria-label="RESUME" class="works-btn" rel="noopener noreferrer">
+                    <a href="assets/cv/resume.pdf" target="_blank" aria-label="RESUME" class="works-btn"
+                        rel="noopener noreferrer">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                             <path d="M16.01 11H4V13H16.01V16L20 12L16.01 8V11Z" fill="#2A2A2A" />
                         </svg>
@@ -575,7 +599,7 @@
         <!-- Work End -->
     </main>
 
-     <!-- Footer Start -->
+    <!-- Footer Start -->
     <footer>
         <div class="container-fluid">
             <span>© 2026 Matt Silverman</span>
