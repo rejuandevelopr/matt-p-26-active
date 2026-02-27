@@ -1151,3 +1151,25 @@ footer svg rect {
     gap: 14px;
 }
 }
+
+.dark-mode-static .toggle-switch-handle,
+.dark-mode-static .toggle-switch-background,
+.dark-mode-static .toggle-switch::before {
+  transition: none !important;
+}
+
+/* Pre-position toggle before JS loads, no transition */
+.preload-dark-toggle .toggle-switch-handle,
+.preload-dark-toggle .toggle-switch-background {
+  transition: none !important;
+}
+
+.preload-dark-toggle .toggle-switch-background {
+  background-color: #222;
+  border-color: #3f3f3f;
+}
+
+.preload-dark-toggle .toggle-switch-handle {
+  transform: translateX(19.5px);
+  background-color: #fff;
+}

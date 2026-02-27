@@ -61,9 +61,10 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <script>
         const isDark = sessionStorage.getItem('darkMode') === 'true';
-        if (isDark) {
-            document.documentElement.classList.add('dark-mode', 'dark-mode-static');
-        }
+  if (isDark) {
+    document.documentElement.classList.add('dark-mode', 'dark-mode-static');
+    document.documentElement.classList.add('preload-dark-toggle');
+  }
     </script>
 </head>
 
@@ -103,7 +104,7 @@
     <main>
         <section>
             <div class="container">
-                <h2 class="title reveal">EXPERIENCE</h2>
+                <h2 class="title reveal">EXPERIMENTS</h2>
                 <div class="playground-table">
                     <table class="reveal">
                         <thead>

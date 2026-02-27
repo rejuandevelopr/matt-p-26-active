@@ -11,23 +11,21 @@ window.addEventListener("scroll", () => {
 // Dark Mode
 document.addEventListener('DOMContentLoaded', () => {
   const toggle = document.querySelector('.toggle-switch input');
-  const handle = document.querySelector('.toggle-switch-handle');
-  const background = document.querySelector('.toggle-switch-background');
 
   const isDark = sessionStorage.getItem('darkMode') === 'true';
-
   toggle.checked = isDark;
+
+  // Remove both blocking classes after toggle is set
   requestAnimationFrame(() => {
-    document.documentElement.classList.remove('dark-mode-static');
+    requestAnimationFrame(() => {
+      document.documentElement.classList.remove('dark-mode-static', 'preload-dark-toggle');
+    });
   });
 
   toggle.addEventListener('change', () => {
     const enabled = toggle.checked;
-
     sessionStorage.setItem('darkMode', enabled);
     document.documentElement.classList.toggle('dark-mode', enabled);
-
-    document.documentElement.classList.remove('dark-mode-static');
   });
 });
 
