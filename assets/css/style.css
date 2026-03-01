@@ -789,6 +789,10 @@ footer .container-fluid {
   gap: 14px;
 }
 
+.clickable-row {
+    cursor: pointer;
+}
+
 .work-card video {
   width: 100%;
   max-width: 424px;
