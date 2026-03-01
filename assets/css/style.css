@@ -30,6 +30,7 @@
   --icon-fill: #020202;
   --link-gray: #b0b0b0;
   --table-hover: #f8f8f8;
+  --playground-date: #AAA;
   /* Icon Colors */
   --markerplace-icon-bg: #020202;
   --markerplace-icon-stroke: #fff;
@@ -65,6 +66,7 @@
   --icon-fill: #fff;
   --link-gray: #909090;
   --table-hover: #1a1a1a;
+  --playground-date: #555; 
   /* Icon Colors */
   --markerplace-icon-bg: #fff;
   --markerplace-icon-stroke: #020202;
@@ -762,6 +764,7 @@ footer .container-fluid {
 
 .playground-table table tbody tr td:nth-child(3) {
   text-align: end;
+  color: var(--playground-date);
 }
 
 .table-tools {
