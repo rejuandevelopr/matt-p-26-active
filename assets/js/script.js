@@ -57,3 +57,37 @@ const observer = new IntersectionObserver((entries) => {
 });
 
 reveals.forEach(el => observer.observe(el));
+
+
+
+function updatePSTTime() {
+  const now = new Date();
+  
+  // Get time in America/Los_Angeles timezone
+  const options = {
+    timeZone: 'America/Los_Angeles',
+    hour: '2-digit',
+    minute: '2-digit',
+    hour12: false
+  };
+  
+  const timeStr = now.toLocaleTimeString('en-US', options);
+  
+  // Get timezone abbreviation (PST or PDT)
+  const tzOptions = {
+    timeZone: 'America/Los_Angeles',
+    timeZoneName: 'short'
+  };
+  const tzStr = now.toLocaleTimeString('en-US', tzOptions);
+  const tzAbbr = tzStr.split(' ').pop(); // Extracts "PST" or "PDT"
+  
+  // Update the element: e.g., "13:09 PST"
+  const el = document.getElementById('pst-time');
+  if (el) {
+    el.textContent = `${timeStr} ${tzAbbr}`;
+  }
+}
+
+// Run immediately, then update every second
+updatePSTTime();
+setInterval(updatePSTTime, 1000);
