@@ -392,6 +392,18 @@ header.scrolled {
   color: var(--font-gray-hover);
 }
 
+.inherit-hover .tab-links__content:hover .subhead {
+  color: inherit;
+}
+
+.inherit-hover .tab-links {
+  cursor: inherit;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
 .links-content-flex {
   display: flex;
   flex-direction: column;
